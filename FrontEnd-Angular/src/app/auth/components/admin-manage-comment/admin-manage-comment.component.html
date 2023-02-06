@@ -1,0 +1,17 @@
+<ng-container *ngFor="let comment of comments; let i = index">
+  <mat-card *ngIf="!comment.isVerified">
+    <mat-card-content
+      >{{ comment.message }}
+      <button
+        mat-raised-button
+        matBadgePosition="before"
+        matBadgeColor="accent"
+        (click)="verifyComment(comment._id)"
+      >
+        Verify
+      </button>
+    </mat-card-content>
+    for Product:
+    {{ comment.product.title }}
+  </mat-card>
+</ng-container>

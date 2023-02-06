@@ -1,0 +1,26 @@
+$main-color: #6394f8;
+$light-text: #eeeeee;
+
+img {
+  float: left;
+  margin-right: 2px;
+  width: 60px;
+}
+
+.item-name {
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.item-price {
+  color: $main-color;
+  margin-right: 8px;
+  margin-left: 5px;
+}
+
+.item-quantity {
+  color: $light-text;
+  margin-left: 5px;
+}

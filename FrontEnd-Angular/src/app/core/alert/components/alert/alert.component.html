@@ -1,0 +1,8 @@
+<mat-icon [color]="'blue'" class="alert-icon">{{ icon }}</mat-icon>
+<div (click)="onClose()" class="alert-close">
+  <span *ngIf="data?.action" [matTooltip]="appConfig.close">{{data?.action}}</span>
+  <mat-icon *ngIf="!data?.action" [matTooltip]="appConfig.close">close</mat-icon>
+</div>
+<span class="alert-text">
+      {{data?.message || message}}
+</span>

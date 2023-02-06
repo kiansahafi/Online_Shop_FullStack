@@ -1,0 +1,172 @@
+<div class="background-picture">
+  <div class="login-container">
+    <div class="login-card container">
+      <mat-tab-group>
+        <mat-tab label="SignIn">
+          <form [formGroup]="signinForm">
+            <div class="signin-wrapper">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input
+                  type="email"
+                  matInput
+                  formControlName="signinEmail"
+                  placeholder="Ex. pat@example.com"
+                />
+                <mat-error
+                  *ngIf="
+                    emailFormControl.hasError('email') &&
+                    !emailFormControl.hasError('required')
+                  "
+                >
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field
+                appearance="outline"
+                style="width: 100%; color: white"
+              >
+                <mat-label>Enter your password</mat-label>
+                <input
+                  matInput
+                  [type]="hide ? 'password' : 'text'"
+                  formControlName="signinPassword"
+                />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide"
+                >
+                  <mat-icon>{{
+                    hide ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </button>
+              </mat-form-field>
+              <div>
+                <mat-checkbox
+                  style="margin: 0 12px"
+                  formControlName="rememberForm"
+                  >remember me!</mat-checkbox
+                >
+              </div>
+
+              <button
+                mat-raised-button
+                color="primary"
+                class="buttonclass"
+                type="submit"
+                (click)="onSignin()"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </mat-tab>
+        <---------------------------------------------------------->
+
+        <mat-tab label="SignUp">
+          <form [formGroup]="signupForm">
+            <div class="signin-wrapper">
+              <div class="name">
+                <mat-form-field
+                  appearance="outline"
+                  style="width: 48%; padding-right: 1em"
+                >
+                  <mat-label>FirstName</mat-label>
+                  <input type="text" matInput formControlName="signupName" />
+                </mat-form-field>
+                <mat-form-field appearance="outline" style="width: 48%">
+                  <mat-label>LastName</mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    formControlName="signupLastName"
+                  />
+                </mat-form-field>
+              </div>
+
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input
+                  formControlName="signupEmail"
+                  type="email"
+                  matInput
+                  placeholder="Ex. pat@example.com"
+                />
+                <mat-error
+                  *ngIf="
+                    emailFormControl.hasError('email') &&
+                    !emailFormControl.hasError('required')
+                  "
+                >
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field
+                appearance="outline"
+                style="width: 100%; color: white"
+              >
+                <mat-label>Enter your password</mat-label>
+                <input
+                  matInput
+                  [type]="hide ? 'password' : 'text'"
+                  formControlName="signupPassword"
+                />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide"
+                >
+                  <mat-icon>{{
+                    hide ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </button>
+              </mat-form-field>
+              <mat-form-field
+                appearance="outline"
+                style="width: 100%; color: white"
+              >
+                <mat-label>ReEnter your password</mat-label>
+                <input
+                  matInput
+                  [type]="hide ? 'password' : 'text'"
+                  formControlName="signupRePassword"
+                />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide"
+                >
+                  <mat-icon>{{
+                    hide ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </button>
+              </mat-form-field>
+              <button
+                mat-raised-button
+                color="primary"
+                class="buttonclass"
+                type="submit"
+                (click)="onSignup()"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

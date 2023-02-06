@@ -1,0 +1,70 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .login-card {
+    width: 400px;
+    height: 60vh;
+    background-color: #333333;
+    margin-top: 25vh;
+    border-radius: 10px;
+  }
+}
+.background-picture {
+  height: 90%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  color: antiquewhite;
+  padding: 16px;
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+.buttonclass {
+  align-items: center;
+  margin: auto;
+}
+::ng-deep.mat-tab-label {
+  color: rgb(255, 255, 255);
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  color: white;
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.signin-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: inherit;
+    background-color: rgb(116, 116, 116);
+    border-radius: 5px;
+  }
+}

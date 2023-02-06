@@ -1,0 +1,77 @@
+$main-color: #6394f8;
+$light-text: #eeeeee;
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+.lighter-text {
+  color: #eeeeee;
+}
+
+.main-color-text {
+  color: $main-color;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  background-color: #eeeeee;
+}
+
+.shopping-cart {
+  margin: 5px 0;
+  // float: right;
+  background: #eeeeee;
+  width: 330px;
+  position: relative;
+  border-radius: 3px;
+  // padding: 20px;
+
+  .shopping-cart-header {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 15px;
+  }
+
+  .shopping-cart-items {
+    padding-top: 20px;
+
+    li {
+      margin-bottom: 18px;
+    }
+
+    img {
+      float: left;
+      margin-right: 2px;
+    }
+  }
+}
+
+// .shopping-cart:after {
+//   bottom: 100%;
+//   left: 89%;
+//   border: solid transparent;
+//   content: " ";
+//   height: 0;
+//   width: 0;
+//   position: absolute;
+//   pointer-events: none;
+//   border-bottom-color: #eeeeee;
+//   border-width: 8px;
+//   margin-left: -8px;
+// }
+
+// .clearfix:after {
+//   content: "";
+//   display: table;
+//   clear: both;
+// }
+
+::ng-deep.mat-menu-panel {
+  min-width: 400px;
+  background-color: #eeeeee;
+}
+
+.checkout-button {
+  margin-left: 130px;
+}

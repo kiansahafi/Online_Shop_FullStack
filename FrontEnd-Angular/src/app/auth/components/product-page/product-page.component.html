@@ -1,0 +1,63 @@
+<div class="wrapper">
+  <div class="product group">
+    <div class="product-image">
+      <!-- <img src="{{ productInfo.image }}" class="col-1-2 product-image" /> -->
+
+      <div class="bg"></div>
+      <div class="indicator">
+        <div class="dot one"></div>
+        <div class="dot two"></div>
+        <div class="dot three"></div>
+        <div class="dot four"></div>
+        <div class="dot five"></div>
+      </div>
+    </div>
+    <div class="col-1-2 product-info">
+      <h1>{{ productInfo?.title }}</h1>
+      <h2>${{ productInfo?.price }}</h2>
+
+      <div class="select-dropdown">
+        <select (change)="onSizeChange($event)">
+          <option value="null">Choose a size</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </div>
+
+      <div class="select-dropdown">
+        <select (change)="onCountChange($event)">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+
+      <br />
+
+      <button class="add-btn" (click)="addToCart()">Add To Cart</button>
+
+      <ul>
+        <li>{{ productInfo?.description }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<ng-container *ngFor="let comment of comments; let i = index">
+  <mat-card>
+    <mat-card-content>{{ comment.message }}</mat-card-content>
+  </mat-card>
+</ng-container>
+<mat-form-field appearance="outline" (change)="NewComment($event)">
+  <mat-label>Comment</mat-label>
+  <textarea matInput placeholder="Comment"></textarea>
+</mat-form-field>
+<button
+  mat-raised-button
+  matBadgePosition="before"
+  matBadgeColor="accent"
+  (click)="AddComment()"
+>
+  Add Comment
+</button>

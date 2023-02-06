@@ -1,0 +1,72 @@
+<div class="background-picture">
+  <nav class="navbar navbar-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img
+          src="https://s4.uupload.ir/files/da7babbcf60e4ad8be113b5feb2ba276_xqw.png"
+          width="50"
+          height="50"
+          alt="logo"
+        />
+      </div>
+      <a style="padding: 0%" href="#">Online Shop</a>
+      <ul style="margin-right: auto">
+        <li>
+          <button
+            mat-raised-button
+            matBadgePosition="before"
+            matBadgeColor="accent"
+            (click)="trasferProducts()"
+          >
+            Products page
+          </button>
+        </li>
+      </ul>
+      <ul class="navbar-right">
+        <li *ngIf="showsignin(); else logout">
+          <button
+            mat-raised-button
+            matBadgePosition="before"
+            matBadgeColor="accent"
+            routerLink="Login"
+          >
+            Sign In / Sign Up
+          </button>
+        </li>
+        <ng-template #logout>
+          <li>
+            <button
+              mat-raised-button
+              matBadgePosition="before"
+              matBadgeColor="accent"
+              routerLink="Login"
+              (click)="LogOut()"
+            >
+              LogOut
+            </button>
+          </li>
+        </ng-template>
+        <li>
+          <button
+            [matMenuTriggerFor]="pashmakMenu"
+            class="shoping-cell-btn"
+            mat-raised-button
+            matBadgePosition="before"
+            matBadgeColor="accent"
+            (hover)="onCard()"
+          >
+            Shopping Cart
+          </button>
+          <mat-menu #pashmakMenu="matMenu">
+            <app-shopping-cart-view></app-shopping-cart-view>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+
+<footer>
+  <h3>Built by Kian 😁✌️</h3>
+</footer>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="shopping-cart">
+    <div class="shopping-cart-header">
+      <i class="fa fa-shopping-cart cart-icon"></i>
+    </div>
+
+    <ul class="shopping-cart-items">
+      <li class="clearfix" *ngFor="let item of cardItem">
+        <app-card-item [cardItem]="item"></app-card-item>
+      </li>
+    </ul>
+    <hr />
+    <button mat-raised-button color="primary" class="checkout-button">
+      checkout
+    </button>
+  </div>
+</div>
